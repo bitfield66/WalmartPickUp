@@ -5,9 +5,15 @@
     <string name="drawer_open">Slider Menu Opened</string>
     <string name="drawer_close">Slider Menu Closed</string>
     <string-array name="nav_drawer_items">
-        <item >Dairy</item>
-        <item >Produce</item>
-        <item >Pharmacy OTC</item>
+        <item>Dairy</item>
+        <item>Produce</item>
+        <item>Pharmacy OTC</item>
         <item>Dry Grocery</item>
     </string-array>
+
+    <string name="home">Home</string>
+    <string name="favourite">Favourite</string>
+    <string name="downloaded">Downloaded</string>
+    <string name="more">More</string>
+    <string name="settings">Settings</string>
 </resources>

@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/head"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/head">
+    android:orientation="vertical">
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/tail"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:background="@drawable/head"
-        android:id="@+id/tail"></LinearLayout>
+        android:orientation="vertical"></LinearLayout>
+
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/mid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/mid"
-        android:background="@color/White">
+        android:background="@color/White"
+        android:orientation="vertical">
+
         <android.support.v7.widget.AppCompatImageButton
             android:id="@+id/mid1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/one"/>
+            android:src="@drawable/one" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/tail"></LinearLayout>
+        android:background="@drawable/tail"
+        android:orientation="vertical"></LinearLayout>
 
 
 </LinearLayout>

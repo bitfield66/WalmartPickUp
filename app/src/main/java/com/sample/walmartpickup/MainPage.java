@@ -25,7 +25,7 @@ public class MainPage extends Activity {
         s1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainPage.this,MainActivity.class);
+                Intent i = new Intent(MainPage.this,DashBoardActivity.class);
                 startActivity(i);
             }
         });
