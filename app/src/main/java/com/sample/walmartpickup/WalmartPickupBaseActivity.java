@@ -1,5 +1,6 @@
 package com.sample.walmartpickup;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,6 +12,10 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.sample.walmartpickup.constants.WalmartConstants;
 
 /**
  * Created by @author on 4/28/2016.
@@ -20,7 +25,7 @@ public abstract class WalmartPickupBaseActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     public LinearLayout llContent;
     public LayoutInflater layoutInflater;
-
+    private TextView tvCartCount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +37,14 @@ public abstract class WalmartPickupBaseActivity extends AppCompatActivity {
     private void initializeViews() {
         layoutInflater = getLayoutInflater();
         llContent = (LinearLayout) findViewById(R.id.llContent);
+        tvCartCount = (TextView) findViewById(R.id.tvCartCount);
         initFab();
         initToolbar();
         setupDrawerLayout();
+    }
+
+    public void setCartCount(){
+       tvCartCount.setText(""+ (++WalmartConstants.CART_COUNT));
     }
 
     private void initToolbar() {
@@ -65,8 +75,12 @@ public abstract class WalmartPickupBaseActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
+
                 menuItem.setChecked(true);
                 drawerLayout.closeDrawers();
+                if(menuItem.getItemId() == R.id.drawer_settings){
+                    startActivity(new Intent(WalmartPickupBaseActivity.this,MapActivity.class));
+                }
                 return true;
             }
         });

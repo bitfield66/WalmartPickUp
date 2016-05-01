@@ -1,23 +1,16 @@
 package com.sample.walmartpickup;
 
 
-import java.util.ArrayList;
-
-import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.content.res.Configuration;
-import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
