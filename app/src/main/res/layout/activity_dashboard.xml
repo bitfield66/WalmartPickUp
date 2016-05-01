@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sample.walmartpickup.controls.AutoScrollViewPager
+        android:id="@+id/viewPagerDashBoard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/deals_height"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@android:color/white"
+        android:elevation="@dimen/elevation_low"></com.sample.walmartpickup.controls.AutoScrollViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_5"
+        android:background="@color/White"
+        android:elevation="@dimen/elevation_low">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:gravity="center_vertical"
+            android:text="Featured Items"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_20"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></android.support.v7.widget.RecyclerView>
+</LinearLayout>
